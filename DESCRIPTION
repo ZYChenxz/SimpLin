@@ -1,0 +1,15 @@
+Package: SimpLin
+Title: A Package for running a simple linear regression model
+Version: 0.0.0.9000
+Authors@R: 
+    person("Zhenyu", "Chen", , "czyra614@gmail.com", role = c("aut", "cre"))
+Description: Outputs estimated regression coefficients, their corresponding standard errors and 95% confidence intervals, residuals, and predicted values.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
+Imports: 
+    Rcpp
