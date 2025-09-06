@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# SimpLin
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of SimpLin is to provide a fast and simple tool for fitting simple linear regression models, powered by a C++ backend using RcppArmadillo. This package was created as part of the STAT 600 Statistical Computing course at CSU.
+
+## Installation
+
+You can install the development version of SimpLin from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ZYChenxz/SimpLin")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(SimpLin)
+set.seed(600) 
+x_vals <- 1:20
+y_vals <- 3 * x_vals + rnorm(20)
+model_fit <- SimpLin(x_vals, y_vals)
+print(model_fit)
+```
+
+This will produce a list containing all the key outputs from the linear regression model, including coefficients, standard errors, confidence intervals, residuals, and predicted values.
