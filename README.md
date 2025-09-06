@@ -18,7 +18,7 @@ set.seed(600)
 
 x_vals <- 1:20
 
-y_vals <- 3 * x_vals + rnorm(50)
+y_vals <- 3 * x_vals + rnorm(20)
 
 model_fit <- SimpLin(x_vals, y_vals)
 
