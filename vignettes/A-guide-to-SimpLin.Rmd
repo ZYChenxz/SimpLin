@@ -1,0 +1,47 @@
+---
+title: "A-guide-to-SimpLin"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A-guide-to-SimpLin}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Loading the Package
+First, we need to load the SimpLin package into our R session.
+
+```{r}
+library(SimpLin)
+```
+
+# Simulating Data
+Next, let's create some sample data to model. 
+
+```{r}
+set.seed(600) 
+
+n <- 20
+x_vals <- runif(n, 0, 50)
+y_vals <- 10 + 3 * x_vals + rnorm(n, 0, 15)
+```
+
+# Fitting the Model
+Now we can use the main function of our package, SimpLin(), to fit a regression model to our simulated data.
+
+```{r}
+model_fit <- SimpLin(x = x_vals, y = y_vals)
+```
+
+# Viewing the Results
+The model_fit object is a list containing all the key outputs from our regression analysis. We can inspect each component.
+
+```{r}
+print(model_fit)
+```
